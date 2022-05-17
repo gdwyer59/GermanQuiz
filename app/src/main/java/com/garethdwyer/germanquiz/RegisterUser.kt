@@ -75,7 +75,6 @@ class RegisterUser : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             task -> if(task.isSuccessful) {
                 val user = User(fullName, age, email)
-                //I should print details of the user object just created above
 
                 FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().currentUser!!.uid).setValue(user).addOnCompleteListener { task2 -> if(task2.isSuccessful) {
                     Toast.makeText(this@RegisterUser, "User has been registered successfully!", Toast.LENGTH_LONG).show()

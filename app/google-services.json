@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "965165592433",
-    "project_id": "auth-fd60c",
-    "storage_bucket": "auth-fd60c.appspot.com"
+    "project_number": "889169783450",
+    "firebase_url": "https://auth-92b92-default-rtdb.firebaseio.com",
+    "project_id": "auth-92b92",
+    "storage_bucket": "auth-92b92.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:965165592433:android:0b6c914f43713c54b510d0",
+        "mobilesdk_app_id": "1:889169783450:android:fd95c8e79e705665cc4d23",
         "android_client_info": {
           "package_name": "com.garethdwyer.germanquiz"
         }
       },
       "oauth_client": [
         {
-          "client_id": "965165592433-cd16sfrggnmajpfuurkdqarggaumfv9p.apps.googleusercontent.com",
+          "client_id": "889169783450-cjojbp4ehv5nd8s0jobbi4fsk4sh9a87.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBUhe4fDyeubHifhho-jQMhcf9rKIGYd74"
+          "current_key": "AIzaSyBpj111usm9F_3-twH9eyKfDjMB1_WUVAI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "965165592433-cd16sfrggnmajpfuurkdqarggaumfv9p.apps.googleusercontent.com",
+              "client_id": "889169783450-cjojbp4ehv5nd8s0jobbi4fsk4sh9a87.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
