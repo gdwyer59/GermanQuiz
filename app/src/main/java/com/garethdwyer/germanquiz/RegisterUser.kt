@@ -81,6 +81,8 @@ class RegisterUser : AppCompatActivity() {
                     binding.progressBar.isVisible = false
 
                     //redirect to login layout
+                    val intent = Intent(this@RegisterUser, MainActivity::class.java)
+                    startActivity(intent)
 
                 }else{
                     Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
