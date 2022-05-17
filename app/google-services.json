@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965165592433",
+    "project_id": "auth-fd60c",
+    "storage_bucket": "auth-fd60c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965165592433:android:0b6c914f43713c54b510d0",
+        "android_client_info": {
+          "package_name": "com.garethdwyer.germanquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965165592433-cd16sfrggnmajpfuurkdqarggaumfv9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUhe4fDyeubHifhho-jQMhcf9rKIGYd74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965165592433-cd16sfrggnmajpfuurkdqarggaumfv9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
