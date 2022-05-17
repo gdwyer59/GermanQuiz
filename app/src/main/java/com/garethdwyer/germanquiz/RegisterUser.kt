@@ -4,8 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
+import androidx.core.view.isVisible
 import com.garethdwyer.germanquiz.databinding.ActivityRegisterUserBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterUser : AppCompatActivity() {
 
@@ -66,6 +69,28 @@ class RegisterUser : AppCompatActivity() {
             binding.password.error = "Minimum Password length should be 6 characters!"
             binding.password.requestFocus()
             return
+        }
+
+        binding.progressBar.isVisible = true
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+            task -> if(task.isSuccessful) {
+                val user = User(fullName, age, email)
+                //I should print details of the user object just created above
+
+                FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().currentUser!!.uid).setValue(user).addOnCompleteListener { task2 -> if(task2.isSuccessful) {
+                    Toast.makeText(this@RegisterUser, "User has been registered successfully!", Toast.LENGTH_LONG).show()
+                    binding.progressBar.isVisible = false
+
+                    //redirect to login layout
+
+                }else{
+                    Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
+                    binding.progressBar.isVisible = false
+                }}
+            }else{
+                Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
+                binding.progressBar.isVisible = false
+            }
         }
     }
 }
