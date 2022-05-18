@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mAuth: FirebaseAuth
     private val viewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen().apply {
             setKeepOnScreenCondition {
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.signIn.setOnClickListener { userLogin() }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.email.setText("")
+        binding.password.setText("")
     }
 
     private fun userLogin() {

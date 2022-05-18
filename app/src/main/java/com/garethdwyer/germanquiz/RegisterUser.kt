@@ -33,7 +33,6 @@ class RegisterUser : AppCompatActivity() {
 
     private fun registerUser() {
 
-        //val email: String = binding.email.toString().trim()
         val email: String = binding.email.text.toString().trim()
         val password: String = binding.password.text.toString().trim()
         val fullName: String = binding.fullName.text.toString().trim()
@@ -44,7 +43,6 @@ class RegisterUser : AppCompatActivity() {
             binding.fullName.requestFocus()
             return
         }
-
         else if (age.isEmpty()){
             binding.age.error = "Age is required"
             binding.age.requestFocus()
@@ -80,9 +78,10 @@ class RegisterUser : AppCompatActivity() {
                     Toast.makeText(this@RegisterUser, "User has been registered successfully!", Toast.LENGTH_LONG).show()
                     binding.progressBar.isVisible = false
 
-                    //redirect to login layout
-                    val intent = Intent(this@RegisterUser, MainActivity::class.java)
-                    startActivity(intent)
+                    //redirect to login layout, finish is significantly faster
+                    finish()
+                    //val intent = Intent(this@RegisterUser, MainActivity::class.java)
+                    //startActivity(intent)
 
                 }else{
                     Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
