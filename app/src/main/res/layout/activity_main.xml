@@ -41,6 +41,7 @@
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:textSize="24sp"
+        android:text="james@hotmail.com"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bannerDescription" />
@@ -54,6 +55,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textSize="24sp"
+        android:text="helloworld"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />

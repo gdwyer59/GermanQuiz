@@ -4,12 +4,14 @@ import android.content.DialogInterface
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.collection.ArrayMap
 import com.garethdwyer.germanquiz.databinding.ActivityQuizBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.*
+
 
 class QuizActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuizBinding
-    //var result: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizBinding.inflate(layoutInflater)
@@ -39,5 +41,7 @@ class QuizActivity : AppCompatActivity() {
         })
         //show dialog box
         alert.show()
+
+        //end testing loop, show result
     }
 }

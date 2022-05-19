@@ -25,6 +25,16 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.crudTV.setOnClickListener {
+            val intent = Intent(this@ProfileActivity, CrudActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.gpsTV.setOnClickListener {
+            val intent = Intent(this@ProfileActivity, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.signOut.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             //significantly faster using finish

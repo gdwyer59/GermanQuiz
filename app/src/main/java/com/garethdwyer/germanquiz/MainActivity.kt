@@ -37,11 +37,11 @@ class MainActivity : AppCompatActivity() {
         binding.signIn.setOnClickListener { userLogin() }
     }
 
-    override fun onResume() {
+    /*override fun onResume() {
         super.onResume()
         binding.email.setText("")
         binding.password.setText("")
-    }
+    }*/
 
     private fun userLogin() {
         val email: String = binding.email.text.toString().trim()

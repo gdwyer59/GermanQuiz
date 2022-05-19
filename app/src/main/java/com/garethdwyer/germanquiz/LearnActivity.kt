@@ -23,15 +23,6 @@ class LearnActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setContentView(binding.root)
         tts = TextToSpeech(this, this)
         Toast.makeText(this@LearnActivity, "Click any German word to hear it!", Toast.LENGTH_SHORT).show()
-
-        /*binding.backBtn.setOnClickListener {
-            val intent = Intent(this@LearnActivity, MainActivity::class.java)
-            startActivity(intent)
-            if (tts != null) {
-                tts!!.stop()
-                tts!!.shutdown()
-            }
-        }*/
     }
 
     @SuppressLint("ObsoleteSdkInt")
