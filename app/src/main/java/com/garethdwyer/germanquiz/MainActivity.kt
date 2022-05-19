@@ -11,7 +11,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
 import com.garethdwyer.germanquiz.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         binding.register.setOnClickListener {
-            val intent = Intent(this@MainActivity, RegisterUser::class.java)
+            val intent = Intent(this@MainActivity, RegisterUserActivity::class.java)
             startActivity(intent)
         }
 

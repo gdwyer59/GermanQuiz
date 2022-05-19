@@ -15,10 +15,10 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*binding.quizTV.setOnClickListener {
+        binding.quizTV.setOnClickListener {
             val intent = Intent(this@ProfileActivity, QuizActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         binding.learnTV.setOnClickListener {
             val intent = Intent(this@ProfileActivity, LearnActivity::class.java)

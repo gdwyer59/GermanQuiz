@@ -10,7 +10,7 @@ import com.garethdwyer.germanquiz.databinding.ActivityRegisterUserBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
-class RegisterUser : AppCompatActivity() {
+class RegisterUserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterUserBinding
     private lateinit var mAuth: FirebaseAuth
@@ -23,7 +23,7 @@ class RegisterUser : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         binding.banner.setOnClickListener {
-            val intent = Intent(this@RegisterUser, MainActivity::class.java)
+            val intent = Intent(this@RegisterUserActivity, MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -75,7 +75,7 @@ class RegisterUser : AppCompatActivity() {
                 val user = User(fullName, age, email)
 
                 FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().currentUser!!.uid).setValue(user).addOnCompleteListener { task2 -> if(task2.isSuccessful) {
-                    Toast.makeText(this@RegisterUser, "User has been registered successfully!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@RegisterUserActivity, "User has been registered successfully!", Toast.LENGTH_LONG).show()
                     binding.progressBar.isVisible = false
 
                     //redirect to login layout, finish is significantly faster
@@ -84,11 +84,11 @@ class RegisterUser : AppCompatActivity() {
                     //startActivity(intent)
 
                 }else{
-                    Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@RegisterUserActivity, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
                     binding.progressBar.isVisible = false
                 }}
             }else{
-                Toast.makeText(this@RegisterUser, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@RegisterUserActivity, "Failed to register! Try again!", Toast.LENGTH_LONG).show()
                 binding.progressBar.isVisible = false
             }
         }
