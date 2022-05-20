@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+
+    <EditText
+        android:id="@+id/lessonTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="lessonTopic"
+        app:layout_constraintBottom_toTopOf="@+id/germanWord1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/germanWord1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Question"
+        app:layout_constraintBottom_toTopOf="@+id/germanWord2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonTopic" />
+
+    <EditText
+        android:id="@+id/englishWord1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="answer"
+        app:layout_constraintBottom_toTopOf="@+id/englishWord2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonTopic" />
+
+    <EditText
+        android:id="@+id/germanWord2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="a"
+        app:layout_constraintBottom_toTopOf="@+id/germanWord3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/germanWord1" />
+
+    <EditText
+        android:id="@+id/englishWord2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="b"
+        app:layout_constraintBottom_toTopOf="@+id/englishWord3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishWord1" />
+
+    <EditText
+        android:id="@+id/germanWord3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/germanWord2" />
+
+    <EditText
+        android:id="@+id/englishWord3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishWord2" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Lesson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonTopic"
+        app:layout_constraintVertical_bias="0.928" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
